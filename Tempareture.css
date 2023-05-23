@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url('body.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: 'monospace','Segoe UI', Tahoma, 'Geneva', 'Verdana', 'sans-serif';
+}
+.header{
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid black;
+    background: linear-gradient(217deg, rgba(199, 42, 42, 0.8), rgba(255,0,0,0) 70.71%),
+                linear-gradient(127deg, rgba(77, 238, 77, 0.8), rgba(0,255,0,0) 70.71%),
+                linear-gradient(336deg, rgba(83, 83, 224, 0.8), rgba(0,0,255,0) 70.71%);
+}
+.header .nav a{
+    text-decoration: none;
+    margin: .6rem;
+    color: #47e74f;
+    padding: 1rem;
+    border-radius: .1rem;
+}
+.header .nav a.active,.header .nav a:hover{
+    background-color: rgb(35, 221, 150);
+    color: rgb(202, 55, 116);
+    font-size: 20px;
+    transition: .5s;
+}
+#main{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    border: 2px solid black;
+}
+.main_box{
+    width: 40vw;
+    height: auto;
+    text-align: center; 
+    box-shadow: 5px 10px 18px #dbd6d6;
+    padding-top: 20px;
+    margin-bottom: 4rem;
+}
+.main_box div{
+    text-decoration-line: none;
+}
+.main_box:hover{
+    padding: 4rem;
+    transition: .5s;
+}
+#main span{
+    padding: 10px;
+    margin: 10px;
+    font-size: 3rem;
+    cursor: pointer;
+    font-weight: 700;
+    color: #2da368;
+    text-shadow: 1px 1px 2px #17462e,
+                 1px 2px 2px #2da368,
+                 1px 3px 2px #2da368,
+                 1px 4px 2px #2da368;
+}
+#main p{
+    padding: 5px;
+    
+    margin: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #4389b8;
+    text-shadow: 1px 1px 1px #223847,
+                 1px 2px 1px #4389b8,
+                 1px 3px 1px #4389b8;
+}
+#main span:hover{
+    padding: 10px;
+    margin: 10px;
+    font-size: 4rem;
+    color: #4389b8;
+    box-shadow: 5px 10px 18px #888888;
+    transition: .5s;
+}
+#main p:hover{
+    padding: 5px;
+    margin: 20px;
+    color: #4389b8;
+}
+#Converter{
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    padding: 1rem;
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+                linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+                linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+}
+#Converter_box{
+    width: 40vw;
+    height: auto;
+    text-align: center;
+    box-shadow: 5px 10px 18px #dbd9d9;
+    display: grid;
+    grid-template-areas:
+                        'one'
+                        'two'
+                        'three'
+                        'four';
+    padding: 2rem;
+    grid-row-gap: 1rem;
+}
+#Converter_box .Converter{
+   display: flex;
+   justify-content: space-between;
+   font-size: 2rem;
+   font-weight: 400;
+}
+#one{
+    grid-area: one;
+}
+#two{
+    grid-area: two;
+}
+#three{
+    grid-area: three;
+}
+#four{
+    grid-area: four;
+}
+#footer{
+    background: linear-gradient(217deg, rgba(199, 42, 42, 0.8), rgba(255,0,0,0) 70.71%),
+                linear-gradient(127deg, rgba(77, 238, 77, 0.8), rgba(0,255,0,0) 70.71%),
+                linear-gradient(336deg, rgba(83, 83, 224, 0.8), rgba(0,0,255,0) 70.71%);
+}
+#footer .footer_box{
+    height: 20vh auto;
+    padding: .6rem 0;
+    border: 2px solid black;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+#col ul{
+    list-style-type: none;
+}

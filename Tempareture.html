@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documens</title>
+    <link rel="stylesheet" type="text/css" href="Tempareture.css" media="all" >
+    <link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="header">
+        <div >
+            <a id="logo"href="Tempareture.html"><svg style="width:10vw;height:10vh;color:rgb(219, 85, 141)" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M9,7H15V9H13V17H11V9H9V7M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" />
+            </svg></a>
+            <p style="margin-left: 1.5rem">Tempareture</p>
+        </div>
+        <div class="nav">
+            <a class="active" href="Tempareture.html">Home</a>
+            <a href="#Converter">Converter</a>
+            <a href="#footer">About me</a>
+        </div>
+    </header>
+    <main id="main" >
+        <section class="main_box">
+            <div>
+                <a href="#Converter"><span>Celcius</span></a></span>
+                <a href="#Converter"><span>Kelvin</span></a>
+                <a href="#Converter"><span>Fahrenheit</span></a>
+            </div>
+            <p>What do you want?</p>   
+        </section>
+    </main>
+    <main id="Converter">
+        <section id="Converter_box">
+                <div class="Converter" id="one">
+                    <span>Celcius:</span>
+                    <input style="border-radius: .3rem"placeholder="Celcius..." type="number"id="Celcius" oninput="CeltoFer(),CeltoKel()"></input>
+                </div>
+                <div class="Converter" id="two">
+                    <span>Fahrenheit:</span>
+                    <input style="border-radius: .3rem"placeholder="Fahrenheit..." type="number"id="Fahrenheit"oninput="FertoCel(),FertoKel()"></input>
+                </div>
+                <div class="Converter" id="three">
+                    <span>Kelvin:</span>
+                    <input style="border-radius: .3rem"placeholder="Kelvin..."type="number"id="Kelvin"oninput="KeltoCel(),KeltoFer()"></input>
+                </div>
+                <div id="four">
+                    <button onclick="location.reload();" style="margin-right: 3rem;padding: 0 .8rem">RESET</button>
+                </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="footer_box">
+        <div >
+            <a id="logo"href="Tempareture.html"><svg style="width:10vw;height:10vh;color:rgb(219, 85, 141)"viewBox="0 0 24 24">
+                <path fill="currentColor" d="M9,7H15V9H13V17H11V9H9V7M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" />
+            </svg></a>
+            <div id="copy">&copy; Copyright 2021 tempareture.com</div>
+        </div>
+        <div id="col">
+            <h1>Support</h1>
+            <ul>
+              <li>Contact us</li>
+              <li>Web chat</li>
+              <li>Open ticket</li>
+            </ul>
+        </div>
+        <div id="col social">
+            <h1>Social</h1>
+            <ul>
+              <a href="#footer"><!--<svg style="width:32px;height:32px;color:rgb(68, 219, 126)" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
+            </svg><img src="https://svgshare.com/i/5fq.svg" width="32" style="width: 32px;">--><i style="width:32px;height:32px;color:rgb(68, 219, 126)"class="fa fa-facebook"></i></a>
+              <a href="#footer"><i style="width:32px;height:32px;color:rgb(68, 219, 126)"class="fa fa-linkedin"></i></a>
+              <a href="#footer"><i style="width:32px;height:32px;color:rgb(68, 219, 126);"class="fa fa-twitter"></i></a>
+            </ul>
+        </div>
+        
+        </div>
+    </footer>
+</body>
+<script>
+    var Celcius = document.getElementById("Celcius");
+    var Fahrenheit = document.getElementById("Fahrenheit");
+    var Kelvin = document.getElementById("Kelvin");
+    var reset = null;
+    function CeltoFer(){
+        let output = (parseFloat(Celcius.value) * 9/5)+32;
+        Fahrenheit.value = parseFloat(output.toFixed(2));
+    }
+    function CeltoKel(){
+        let output = (parseFloat(Celcius.value))+273.15;
+        Kelvin.value = parseFloat(output.toFixed(2));
+    }
+    function FertoCel(){
+        let output = (parseFloat(Fahrenheit.value) - 32) * 0.556;
+        Celcius.value = parseFloat(output.toFixed(2));
+    }
+    function FertoKel(){
+        let output = ((parseFloat(Fahrenheit.value) - 32) * .556) + 273.15;
+        Kelvin.value = parseFloat(output.toFixed(2));
+    }
+    function KeltoCel(){
+        let output = (parseFloat(Kelvin.value) - 273.15);
+        Celcius.value = parseFloat(output.toFixed(2));
+    }
+    function KeltoFer(){
+        let output = ((parseFloat(Kelvin.value) - 273.15) * 1.8) + 32;
+        Fahrenheit.value = parseFloat(output.toFixed(2));
+    }
+</script>
+</html>
